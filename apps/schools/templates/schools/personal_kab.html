@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Личный кабинет</title>
+</head>
+<style>
+    html, body {
+    width: 100%;
+    height:100%;
+    font-family: 'Bahnschrift Light', Arial, sans-serif;
+  }
+  html { overflow-x: hidden; overflow-y: hidden; }
+  body {
+      background: linear-gradient(-45deg, #ffffff, rgb(208, 223, 225), rgb(189, 217, 220), rgb(77, 147, 156), rgb(47, 77, 81));
+      background-size: 200% 100%;
+      animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+#img{
+    width: 600px;
+    margin: 50px;
+}
+.margin{
+    margin: 4%;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    font-size:  calc(17px + (12 + 12 * 0.7) * ((100vw - 320px) / 1280));
+}
+</style>
+<body>
+    <div class="head">
+        Личный кабинет школьника
+    </div>
+    <div class="center">
+        <div>
+            <img id="img" src="https://cdn.create.vista.com/api/media/medium/367025642/stock-photo-portrait-beautiful-young-woman-grey?token=1yev63horpVylEd4vUvmDtGJpQKO98Y1gGmkpeXw16C4pBiQ6SB9jpp1pMzfgo4F">
+        </div>
+        <div class="margin">
+            <div>
+                <p>Имя:</p>
+            </div>
+            <div>
+                <p>Фамилия:</p>
+            </div>
+            <div>
+                <p>Школа:</p>
+            </div>
+        </div>
+        <div class="margin">
+            <div>
+                <p>Класс:</p>
+            </div>
+            <div>
+                <p>Номер Телефона:</p>
+            </div>
+            <div>
+                <p>Почта:</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="http://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<form method="post" class="form-control" action="#" id="form">
+        
+    <div class="form-floating">
+        <div><label for="name">Введите имя: </label>
+            <input class="inp" required type="text" placeholder="Имя" name="name">
+        </div>
+        <div><label for="l_name">Введите фамилию: </label>
+            <input class="inp" required type="text" placeholder="Фамилия" name="l_name">
+        </div>
+
+        <div><label for="email">Введите почту: </label>
+            <input class="inp" required type="email" placeholder="Почта" name="email"></div>
+        <div><label for="school">Выберите школу: </label>
+            <input class="inp" required type="text" placeholder="Школа №1" name="school"></div>
+        <div>
+    
+            <label for="class">Введите класс: </label>
+            <input class="inp" required type="number" placeholder="1-11" name="class" min="1" max="12"></div>
+        <div><label for="inn">Введите ИНН: </label>
+            <input class="inp" class="noSpin" type="number" placeholder="ИНН" name="inn" size="12" required pattern="[0-9]{10,12}" onchange="isINN(this)">
+        </div>
+
+        <div><label for="online_phone">Введите номер телефона: </label>
+            <input class="inp" id="online_phone" name="phone" type="tel" maxlength="50"
+                autofocus="autofocus" required="required"
+                value="+7(___)___-__-__"
+                placeholder="+7(___)___-__-__"></div>
+
+          
+        <div><label for="class">Введите пароль: </label>
+            <input class="inp" required type="password" placeholder="A-z0-1!@#$%^&*" name="class" minlength="10"></div>
+
+        <div class="form__item" id="block1">
+            <div  class="form__label">Прикрепить фото</div>
+            <div class="inp" class="file">
+                <div class="file__item">
+                    <input id="formImage" accept=".jpeg, .png, .gif" type="file" name="image" class="file__input">
+                </div>
+                <div id="" class="file__preview"></div>
+            </div>
+        </div>
+
+        <div class="form__item" id="block2">
+            <div class="checkbox">
+                <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox___input">
+                <label for="formAgreement" class="checkbox__label">
+                    <span>Я даю свое согласие на обработку персональных данных в соответствии с 
+                        <a href="https://online.zakon.kz/Document/?doc_id=31396226&pos=10;-137#pos=10;-137">
+                            условием
+                        </a>
+                    </span>
+                </label>
+            </div>
+        </div>
+        
+
+        <div style="display: flex; justify-content:center;">
+            <button type="submit" class="btn btn-success">
+                Зарегистрироваться
+            </button>
+        </div>
+        
+    </div>
+
+</form>

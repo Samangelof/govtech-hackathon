@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="schools.css">
+
+    <link href="http://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Список школ</title>
+</head>
+<style>
+    body{
+    font-family: 'Bahnschrift Light', Arial, sans-serif;;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+}
+.img{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-image: url("https://cdn.create.vista.com/api/media/medium/337432636/stock-photo-cute-little-children-with-books?token=");
+}
+#head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#head > p {
+    font-size: calc(15px + (15 + 15 *0.7) * (100vw - 320px) / 1280);
+}
+.schools{
+    width: 80%;
+    margin: 0 auto;
+}
+.school{
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 30px;
+    border-radius: 15px;
+    padding: 3%;
+}
+.img_schools{
+    max-width: 200px;
+}
+.text_box{
+    margin-left: 5%;
+}
+.text_box > #p{
+    font-size: calc(10px + (10 + 10 *0.7) * (100vw - 320px) / 1280);
+}
+.text_box > p{
+    font-size: calc(8px + (6 + 6 *0.7) * (100vw - 320px) / 1280);
+}
+</style>
+    <script src="https://kit.fontawesome.com/b3330d82de.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<body>
+
+    <div id="head" data-aos="fade-left">
+        <img data-aos="zoom-in" style="width: 80px; height: 100px; margin-right: 30px;" src="http://sun9-70.userapi.com/s/v1/if1/HogWW1Q2gw84edolyq7nkebdswS_u2eQoO0oDDmCXLqGCVY3-NGlJKqmPTW8AeHJib2WAQ.jpg?size=200x275&amp;quality=96&amp;crop=66,144,237,327&amp;ava=1">
+        <p style="margin-top: 10px;">Список школ Карагандинской области</p>
+        
+    </div>
+    
+    <div class="img">
+
+    </div>
+
+        <header class="p-3 mb-3 border-bottom" data-aos="fade-right">
+            <div class="container">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="#" class="nav-link px-2 link-secondary">На главную</a></li>
+                </ul>
+
+                <div class="box">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary" type="button" id="dropdownMenuButton" style="margin: 10px;"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Город
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Абай</a>
+                            <a class="dropdown-item" href="#">Балхаш</a>
+                            <a class="dropdown-item" href="#">Жезказган</a>
+                            <a class="dropdown-item" href="#">Караганда</a>
+                            <a class="dropdown-item" href="#">Каражал</a>
+                            <a class="dropdown-item" href="#">Каркаралинск</a>
+                            <a class="dropdown-item" href="#">Приозёрск</a>
+                            <a class="dropdown-item" href="#">Сарань</a>
+                            <a class="dropdown-item" href="#">Сатпаев</a>
+                            <a class="dropdown-item" href="#">Темир</a>
+                            <a class="dropdown-item" href="#">Шахтинск</a>
+                        </div>
+                      </div>
+    
+                      <div class="dropdown">
+                        <button class="btn btn-outline-primary" type="button" id="dropdownMenuButton" style="margin: 10px;"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Тип
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">малокомплектная школа</a>
+                            <a class="dropdown-item" href="#">общеобразовательная школа</a>
+                            <a class="dropdown-item" href="#">начальная школа</a>
+                            <a class="dropdown-item" href="#">опорная школа</a>
+                            <a class="dropdown-item" href="#">интернат при опорной школе </a>
+                            <a class="dropdown-item" href="#">основная средняя школа</a>
+                            <a class="dropdown-item" href="#">интернат при общеобразовательной школе</a>
+                            <a class="dropdown-item" href="#">вечерняя школа</a>
+                            <a class="dropdown-item" href="#">общеобразовательная школа при исправительном учреждении</a>
+                            <a class="dropdown-item" href="#">школа-гимназия</a>
+                            <a class="dropdown-item" href="#">школа-лицей</a>
+    
+                            <a class="dropdown-item" href="#">школа-центр дополнительного образования</a>
+                            <a class="dropdown-item" href="#">санаторная школа-интернат</a>
+                            <a class="dropdown-item" href="#">специализированная школа-интернат</a>
+    
+                            <a class="dropdown-item" href="#">организации образования для детей с девиантным поведением</a>
+                            <a class="dropdown-item" href="#">санаторная школа-интернат</a>
+                            <a class="dropdown-item" href="#">специализированная музыкальная школа-интернат</a>
+                        </div>
+                      </div>
+                </div>
+                
+
+                  <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control" placeholder="Поиск..." aria-label="Search">
+                  </form>
+        
+              </div>
+          </header>
+
+          <div class="schools">
+
+            <div class="school" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+
+                <img class="img_schools" src="https://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1Rk5gS4fvuX8bmfK7xNs3oI2KaKTM5SRkZCeTgDn6uOyic&fn=sqr_288">
+                <div class="text_box">
+                  <p id="p">
+                    <a style="color: rgb(47, 77, 81);" href="#">Общеобразовательная школа №63</a>
+                  </p>
+                  <p style="margin-top: 15%;">Адрес: улица Лободы 26, Караганда</p>
+                  <p>Контакты: 	Приемная 8 (7212) 56-47-54</p>
+                </div>
+                
+            </div>
+
+              <div>
+                  {% for i in schools %}
+                    <li>{{ i }}</li>
+                  {% endfor %}
+              </div>
+
+
+            <div class="school" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+              
+              <img class="img_schools" src="https://i1.photo.2gis.com/images/branch/84/11821949068671885_8fcf.jpg">
+              <div class="text_box">
+                <p id="p">
+                  <a style="color: rgb(47, 77, 81);" href="#">Гимназия №1</a>
+                </p>
+                <p style="margin-top: 15%;"> улица Костенко, 13, Караганда</p>
+                <p>Контакты: 	Приемная 8 (7212) 42-01-74</p>
+              </div>
+              
+          </div>
+
+
+          <div class="school" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
+              
+            <img class="img_schools" src="https://i7.photo.2gis.com/images/branch/0/30258560054753980_4845_300x300.jpg">
+            <div class="text_box">
+              <p id="p">
+                <a style="color: rgb(47, 77, 81);" href="#">Гимназия №3</a>
+              </p>
+              <p style="margin-top: 15%;">Адрес:  проспект Нурсултана Назарбаева 25, Караганда</p>
+              <p>Тел: 8-721-256-27-03, 8-721-256-00-16</p>
+            </div>
+            
+        </div>
+
+          </div>
+
+<script src="http://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

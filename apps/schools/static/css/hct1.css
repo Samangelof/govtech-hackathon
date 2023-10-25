@@ -1,0 +1,442 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+html { overflow-x: hidden; }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Bahnschrift Light', Arial, sans-serif;
+}
+.change-lang{
+  margin-left: 10%;
+}
+
+
+
+
+#head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#head > p{
+    font-size: calc(15px + (15 + 15 *0.7) * (100vw - 320px) / 1280);
+    font-family: 'Bahnschrift Light', Arial, sans-serif;
+}
+#head_img{
+  height: 550px;
+  width: 100%;
+}
+#hrefs{
+    display: flex;
+    justify-content: space-between;
+}
+#hrefs > p{
+  margin: 5px;
+}
+#hrefs> p > a{
+    text-decoration: none;
+    color: white;
+    font-size: 100%;
+}
+#header-head{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(47, 77, 81);
+}
+#navs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  color: white;
+}
+#teleg > a:hover{
+    color: rgb(91, 91, 121);
+}
+#faceb > a:hover{
+    color: rgb(0, 0, 148);
+}
+#vk > a:hover{
+    color: rgb(91, 91, 121);
+}
+#twitt > a:hover{
+    color: rgb(53, 53, 255);
+}
+#insta > a:hover{
+    color: rgb(142, 0, 113);
+}
+#youtube > a:hover{
+    color: rgb(180, 0, 0);
+}
+
+#bgr_img_hover{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#bgr_img_hover > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 20%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPEAAADRCAMAAAAquaQNAAAAA1BMVEXp6elXI8SMAAAAR0lEQVR4nO3BMQEAAADCoPVP7WULoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABuxZIAAeHuCGgAAAAASUVORK5CYII=");
+  border: 1px black solid;
+  transition-duration: .2s;
+}
+#bgr_img_hover > div:hover{
+  display: flex;
+  background-size: cover;
+  transition-duration: .2s;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://kolobok.ua/i/81/60/35/816035/79c3340656db610ee8b50196a3b66138-quality_70Xresize_crop_1Xallow_enlarge_0Xw_698Xh_465.jpg");
+}
+
+.parag_img{
+  font-size: calc(17px + (12 + 12 * 0.7) * ((100vw - 320px) / 1280));
+  line-height: 0.5;
+  font-family: 'Bahnschrift Light', Arial, sans-serif;
+}
+.zagagulina{
+  font-size: calc(15px + (15 + 15 * 0.7) * ((100vw - 320px) / 1280));
+}
+
+
+.collapse{
+    display: flex;
+    justify-content: space-around;
+}
+#bg-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("https://school-shostakovich.ru/wp-content/uploads/2019/02/sl5.jpg");
+}
+.dropdown{
+    margin: 10px;
+}
+
+#info-box > p{
+  font-size: 30px;
+  font-family: 'Bahnschrift Light', Arial, sans-serif;
+}
+.conteiner-info{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  width: 100%;
+}
+#bogatstvo{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+#bogatstvo > p{
+  font-size: calc(18px + (17 + 17 * 0.7) * ((100vw - 320px) / 1280));
+  font-family: 'Bahnschrift Light', Arial, sans-serif;
+}
+.col-sm-8 > p{
+    font-size: calc(10px + (7 + 7 * 0.7) * ((100vw - 320px) / 1280));
+    font-family: 'Bahnschrift Light', Arial, sans-serif;
+}
+.col-sm-8 > h1{
+  font-size: 40px;
+  font-family: 'Bahnschrift Light', Arial, sans-serif;
+}
+.info-list{
+  display: block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 90%;
+}
+.info{
+  font-size: calc(12px + (10 + 10 * 0.7) * ((100vw - 320px) / 1280));
+  font-family: 'Bahnschrift Light', Arial, sans-serif;
+  margin-bottom: 15px;
+  line-height: 26px;
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+  padding: 0px 0px 0px ;
+}
+.info:hover{
+  font-size: calc(12px + (11 + 11 * 0.7) * ((100vw - 320px) / 1280));
+  transform: scale(1.2);
+}
+.info > p {
+  line-height: 2em;
+}
+
+#img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("https://sinkvein.ru/wp-content/uploads/2021/09/1.-%D0%A3%D1%87%D0%B5%D0%B1%D0%B0.jpg");
+}
+#nav-center{
+  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: grey;
+}
+.nav-link{
+  font-family: 'Bahnschrift Light', Arial, sans-serif;
+  font-size: calc(10px + (10 + 10 * 0.7) * ((100vw - 320px) / 1280));
+  margin: 0.1em;
+  color: black;
+}
+#slide-display{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  margin-top: 0px;
+}
+#center{
+  padding-left: 300px;
+}
+#center > img{
+  height: auto; 
+  width: auto; 
+  max-width: 900px; 
+  max-height: 700px;
+}
+.carousel-caption{
+  font-family:'Bahnschrift Light', Arial, sans-serif;
+  text-shadow: 4px 4px 5px black;
+}
+#carousel-center{
+  display: flex;
+  justify-content: flex-start;
+  font-size: calc(20px + (20 + 20 * 0.7) *(100vw - 320px) / 1280);
+  font-family:'Bahnschrift Light', Arial, sans-serif;
+  margin-bottom: 20px;
+}
+#carousel-center > p{
+  margin-left: 10%;
+}
+#carousel-center-min{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 30px;
+  font-family:'Bahnschrift Light', Arial, sans-serif;
+  margin-top: 50px;
+}
+#carousel-center-min > p{
+  font-size: calc(20px + (20 + 20 * 0.7) *(100vw - 320px) / 1280);
+  margin-left: 10%;
+}
+#large-info-button{
+  color: black;
+  font-size: calc(10px + (8 + 8 * 0.7) *(100vw - 320px) / 1280);
+  font-family:'Bahnschrift Light', Arial, sans-serif;
+  transition: .1s;
+  transition-timing-function: ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+}
+#large-info-button:hover{
+  color: rgb(121, 121, 121);
+}
+#centered-info-link{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#centered-info-link > p{
+  font-size: calc(9px + (8 + 8 * 0.7) *(100vw - 320px) / 1280);
+}
+#cosmos, #math, #abai, #france, #medal, #paralim, #stem, #intellekt, #haki, #CoolGames{
+  width: 80%;
+}
+#cosmos{
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family:'Bahnschrift Light', Arial, sans-serif;
+  color: white;
+  font-size: 17px;
+  text-shadow: 4px 4px 5px black;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("https://static.wikia.nocookie.net/ultimate-game-mixup/images/1/13/Kosmos.jpg/revision/latest?cb=20180704144102&path-prefix=ru");
+}
+#math{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    color: white;
+    font-size: 17px;
+    text-shadow: 4px 4px 5px black;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://repository.library.voenmeh.ru/xmlui/bitstream/id/d0ce3bf6-d39b-4635-975f-d5ecb766a976/%D0%BC%D0%B0%D1%82%20%D0%BC%D0%B5%D1%85.jpg?sequence=-1");
+}
+#france{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    color: black;
+    font-size: 17px;
+    text-shadow: 4px 4px 5px white;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://api.nashkiev.ua/img-srv/image/width=860,quality=85/media-storage/02_2022/2022_02_14_695a52274319da13.jpg");
+}
+#medal{
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    color: black;
+    font-size: 17px;
+    background-color: rgba(64, 77, 75, 0.249);
+}
+#paralim{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    font-size: 17px;
+    color: black;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://img2.goodfon.ru/wallpaper/nbig/3/df/motivaciya-sport-trenirovki.jpg");
+}
+#stem{
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    font-size: 17px;
+    color: black;
+}
+#intellekt{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    font-size: 17px;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(36, 36, 36, 0.85), rgba(36, 36, 36, 0.85)), url("https://setphone.ru/wp-content/uploads/2019/07/cpu-chip-shape-of-brain-on-smart-phone-mobile-smart-pad-grow-artificial-intelligence-rc88jduxl-thumbnail-full10.png");
+}
+#haki{
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    font-size: 17px;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(36, 36, 36, 0.85), rgba(36, 36, 36, 0.85)), url("https://kartinkin.net/uploads/posts/2021-04/thumbs/1617303017_8-p-tsvet-khaki-fon-9.jpg");
+}
+#CoolGames{
+    font-family:'Bahnschrift Light', Arial, sans-serif;
+    font-size: 17px;
+    color: black;
+    background-color: rgba(197, 183, 121, 0.112);
+}
+#headingOne, #headingTwo, #headingTree, #headingFour, #headingFive,
+#headingOneSix, #headingSeven, #headingEight, #headingNine, #headingTen, 
+#headingEleven, #headingTwelve{
+  width: 100%;
+}
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-left: 10%;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+}
+.col > h5{
+  font-size: calc(10px + (10 + 10 *0.7) * ((100vw - 320px) / 1280));
+}
+#font{
+  font-size: calc(10px + (10 + 10 * 0.7) * ((100vw - 320px) / 1280));
+}
+.carousel-item {
+  width: 100%;
+}
+.carousel-item > img{
+  margin: 0 auto;
+  width: 80%;
+  height: 600px;
+  object-fit: cover;
+}
+.carousel-caption > h2{
+  font-size: calc(10px + (15 + 15 *0.7) * ((100vw - 320px) / 1280));
+  padding-bottom: 5%;
+}
+.carousel-caption > p{
+  font-size: calc(5px + (10 + 10 *0.7) * ((100vw - 320px) / 1280));
+  padding-bottom: 5%;
+}
+.card-body > p{
+  font-size: calc(9px + (8 + 8 *0.7) * ((100vw - 320px) / 1280));
+}
+#mob_version{
+  font-size: calc(12px + (6 + 6 *0.7) * ((100vw - 320px) / 1280)); 
+  font-family:'Bahnschrift Light', Arial, sans-serif; 
+  margin: 5px;
+}
+.card-header{
+  padding-left: 0px;
+}
+.img{
+  max-width: 400px;
+}
+@media screen and (max-width: 768px) {
+  .info-list{
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+    width: 90%;
+  }
+  .carousel-item {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  #bgr_img_hover{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #bgr_img_hover > div {
+    height: 200px;
+    width: 100%;
+    line-height: 0.3;
+  }
+  #bgr_img_hover > h4{
+    font-size: 15px;
+  }
+  .img{
+    max-width: 200px;
+  }
+  #head_img{
+    height: 300px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #centered-info-link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  #head_img{
+    height: 300px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .carousel-item {
+    width: 100%;
+    height: 200px;
+  }
+  .carousel-item > div{
+    max-width: 100%;
+  }
+  #head_img{
+    height: 270px;
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,243 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sing-in.css' %}">
+    <title>{{ title }}</title>
+</head>
+
+    <script src="https://kit.fontawesome.com/b3330d82de.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<body>
+    
+
+    <div class="head_flex">
+
+        <div class="head_img">
+            <div class="title">Регистрация
+                <div style="font-size: calc(10px + (10 + 10 * 0.7) * ((100vw - 320px) / 1280)); margin-left: 15%;">для учеников</div>
+            </div>
+
+            <div class="text">
+                Регистрация позволит вам получать самую свежую информацию о вашей школе.<br><br>
+                Вы сможете следить за рейтингом школ, оставлять комментарии.<br><br>
+                В вашем доступе будет самая развернутая информация о всех школах Карагандинской области, а так же о кружках и секциях.
+            </div>
+
+            <p id="p">У вас уже есть аккаунт? Тогда можете<br>
+                <a href="{% url 'auth' %}" id="link_with_color">Войти</a>!
+            </p>
+        
+        </div>
+
+        
+        <form method="post" class="form-control" action="#" id="form">
+        
+            <div class="form-floating">
+                <div><label for="name">Введите имя: </label>
+                    <input class="inp" required type="text" placeholder="Имя" name="name">
+                </div>
+                <div><label for="l_name">Введите фамилию: </label>
+                    <input class="inp" required type="text" placeholder="Фамилия" name="l_name">
+                </div>
+
+                <div><label for="email">Введите почту: </label>
+                    <input class="inp" required type="email" placeholder="Почта" name="email"></div>
+                <div><label for="school">Выберите школу: </label>
+                    <input class="inp" required type="text" placeholder="Школа №1" name="school"></div>
+                <div>
+            
+                    <label for="class">Введите класс: </label>
+                    <input class="inp" required type="number" placeholder="1-11" name="class" min="1" max="12"></div>
+                <div><label for="inn">Введите ИНН: </label>
+                    <input class="inp" class="noSpin" type="number" placeholder="ИНН" name="inn" size="12" required pattern="[0-9]{10,12}" onchange="isINN(this)">
+                </div>
+
+                <div><label for="online_phone">Введите номер телефона: </label>
+                    <input class="inp" id="online_phone" name="phone" type="tel" maxlength="50"
+                        autofocus="autofocus" required="required"
+                        value="+7(___)___-__-__"
+                        placeholder="+7(___)___-__-__"></div>
+
+                  
+                <div><label for="class">Введите пароль: </label>
+                    <input class="inp" required type="password" placeholder="A-z0-1!@#$%^&*" name="class" minlength="10"></div>
+    
+                <div class="form__item" id="block1">
+                    <div  class="form__label">Прикрепить фото</div>
+                    <div class="inp" class="file">
+                        <div class="file__item">
+                            <input id="formImage" accept=".jpeg, .png, .gif" type="file" name="image" class="file__input">
+                        </div>
+                        <div id="" class="file__preview"></div>
+                    </div>
+                </div>
+        
+                <div class="form__item" id="block2">
+                    <div class="checkbox">
+                        <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox___input">
+                        <label for="formAgreement" class="checkbox__label">
+                            <span>Я даю свое согласие на обработку персональных данных в соответствии с 
+                                <a href="https://online.zakon.kz/Document/?doc_id=31396226&pos=10;-137#pos=10;-137">
+                                    условием
+                                </a>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                
+    
+                <div style="display: flex; justify-content:center;">
+                    <button type="submit" class="btn btn-success">
+                        Зарегистрироваться
+                    </button>
+                </div>
+                
+            </div>
+    
+        </form>
+
+
+    </div>
+    
+
+
+
+<form method="post" class="form-control" action="{% url 'registration' %}" id="form">
+    <div class="form-floating">
+        {% csrf_token %}
+        {% for f in form %}
+            <div>
+                <label for="{{ f.id_for_label }}">
+                    {{ f.label }}: 
+                </label>{{ f }}
+            </div>      
+        {% endfor %}
+
+        <div style="display: flex; justify-content:center;">
+            <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+    <script type="text/javascript">
+        function setCursorPosition(pos, e) {
+          e.focus();
+          if (e.setSelectionRange) e.setSelectionRange(pos, pos);
+          else if (e.createTextRange) {
+            var range = e.createTextRange();
+            range.collapse(true);
+            range.moveEnd("character", pos);
+            range.moveStart("character", pos);
+            range.select()
+          }
+        }
+      
+        function mask(e) {
+          //console.log('mask',e);
+          var matrix = this.placeholder,// .defaultValue
+              i = 0,
+              def = matrix.replace(/\D/g, ""),
+              val = this.value.replace(/\D/g, "");
+          def.length >= val.length && (val = def);
+          matrix = matrix.replace(/[_\d]/g, function(a) {
+            return val.charAt(i++) || "_"
+          });
+          this.value = matrix;
+          i = matrix.lastIndexOf(val.substr(-1));
+          i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
+          setCursorPosition(i, this)
+        }
+        window.addEventListener("DOMContentLoaded", function() {
+          var input = document.querySelector("#online_phone");
+          input.addEventListener("input", mask, false);
+          input.focus();
+          setCursorPosition(3, input);
+        });
+      </script>
+    <script>
+        // Функция для проверки правильности ИНН
+        function is_valid_inn(i)
+        {i= i.toString();
+            if ( i.match(/\D/) ) return false;
+            var inn = i.match(/(\d)/g);
+            if ( inn.length == 10 )
+            {
+                return inn[9] == String(((
+                            2*inn[0] + 4*inn[1] + 10*inn[2] +
+                            3*inn[3] + 5*inn[4] +  9*inn[5] +
+                            4*inn[6] + 6*inn[7] +  8*inn[8]
+                        ) % 11) % 10);
+            }
+            else if ( inn.length == 12 )
+            {
+                return inn[10] == String(((
+                            7*inn[0] + 2*inn[1] + 4*inn[2] +
+                            10*inn[3] + 3*inn[4] + 5*inn[5] +
+                            9*inn[6] + 4*inn[7] + 6*inn[8] +
+                            8*inn[9]
+                        ) % 11) % 10) && inn[11] == String(((
+                            3*inn[0] +  7*inn[1] + 2*inn[2] +
+                            4*inn[3] + 10*inn[4] + 3*inn[5] +
+                            5*inn[6] +  9*inn[7] + 4*inn[8] +
+                            6*inn[9] +  8*inn[10]
+                        ) % 11) % 10);
+            }
+    
+            return false;
+        }
+    
+        // функция на изменение поля ввода ИНН
+        function isINN(t)
+        {
+            t.value=trim(t.value);
+            if(is_valid_inn(t.value)){
+                addClass(t,'valid');
+                removeClass(t,'invalid');
+                // сайт с которого будете вызывать укажите в https://htmlweb.ru/user/#allowDomain
+                fetch('//htmlweb.ru/json/service/org/?inn=' + t.value+'&api_key=0').then(function (e) {
+                    e.json().then(function (e) {
+                        console.log(e); //  все что пришло выведу в консоль
+                        t.form.lastElementChild.innerHTML='Инфо: '+e.status+(e.error?' '+e.error:'')+(e.message?' '+e.message:'');
+                        if(e.status==='ACTIVE'){
+                            t.form.kpp.value= e.kpp?e.kpp:0;
+                            t.form.owner.value= e.name;
+                            t.form.address.value= e.address;
+                            t.form.seo.value=(e.seo_post?e.seo_post:'')+' '+ (e.seo_name?e.seo_name:'');
+                        }
+                    }).catch(function(error) {
+                        console.warn('Request failed', error);
+                    });
+                });
+                return true;
+            }else{
+                addClass(t,'invalid');
+                removeClass(t,'valid');
+                return false;
+            }
+        }
+        function addClass(o, c){
+            if(!o.classList.contains(c)) o.classList.add(c);
+        }
+    
+        function removeClass(o, c){
+            o.classList.remove(c);
+        }
+    </script>
+</body>
+</html>
